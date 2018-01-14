@@ -393,7 +393,7 @@ input {
   left: 50%;
   margin-left: -284px;
 
-  display: flex;
+  display: none;
   justify-content: space-between;
   flex-wrap: wrap;
 
@@ -409,6 +409,28 @@ input {
   background-color: #fff;
   box-shadow: 0 7px 15px rgba(0,1,1,0.15);
 }
+
+@keyframes appearance {
+	0% {
+		transform: translateY(-86px);
+	}
+	70% {
+		transform: translateY(0);
+	}
+	90% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+.popup-show {
+	display: flex;
+	
+	animation: appearance 0.7s;
+}
+
 
 .hotel-search-item {
   display: flex;
@@ -677,6 +699,7 @@ input[type="checkbox"]:disabled + label {
 
   font-size: 14px;
   line-height: 34px;
+	vertical-align: top;
 }
 
 .price-controls input{
